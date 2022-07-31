@@ -14,25 +14,25 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'echo "Fail!"; exit 1 making sure I am catching on....yep I am learning Jenkins a little bit'
+                bat 'echo "Fail!"; exit 1'
             }
         }
     }
     post {
         always {
-            bat 'This will always run'
+            bat 'echo "This will always run"
         }
         success {
-            bat 'This will run only if successful'
+            bat 'echo "This will run only if successful"
         }
         failure {
-            bat 'This will run only if failed'
+            bat echo "This will run only if failed"
         }
         unstable {
-            bat 'This will run only if the run was marked as unstable'
+            bat 'echo "This will run only if the run was marked as unstable"
         }
         changed {
-            bat 'This will run only if the state of the Pipeline has changed'
+            bat 'echo "This will run only if the state of the Pipeline has changed"
             bat 'For example, if the Pipeline was previously failing but is now successful'
         }
     }
