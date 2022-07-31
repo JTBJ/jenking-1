@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo "Hello World"'
-                bat '
+                bat '''
                     echo "Multiline shell steps works too"
                     cd ../../../IdeaProjects/swingPractice/src/selfPractice
                     javac Main.java
@@ -21,6 +21,9 @@ pipeline {
     post {
         always {
             bat '''echo "This will always run"'''
+            mail to: 'bentonjames286@gmail.com',
+                 subject: "Always Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Do not know it this passed or failed ${env.BUILD_URL}"
         }
         success {
             bat '''echo "This will run only if successful"'''
