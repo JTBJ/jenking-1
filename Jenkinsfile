@@ -27,7 +27,7 @@ pipeline {
         }
         failure {
             bat '''echo "This will run only if failed"'''
-            mail to: 'team@example.com',
+            mail to: 'bentonjames286@gmail.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                  body: "Something is wrong with ${env.BUILD_URL}"
         }
