@@ -6,9 +6,9 @@ pipeline {
                 bat 'echo "Hello World"'
                 bat '''
                     echo "Multiline shell steps works too"
-                    cd ../../../eclipse-workspace/Simple/src/main/java/simple
-                    javac Simple.java
-                    java Simple.java
+                    cd ../../../IdeaProjects/swingPractice/src/basicSwing
+                    javac App.java
+                    java App.java
                 '''
             }
         }
