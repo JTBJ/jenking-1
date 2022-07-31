@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'echo "Fail!"; exit 1'
+                bat 'echo "Fail!"; exit 1 making sure I am catching on....yep I am learning Jenkins a little bit'
             }
         }
     }
