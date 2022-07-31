@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo "Hello World"'
-                bat '''
+                bat '
                     echo "Multiline shell steps works too"
                     cd ../../../IdeaProjects/swingPractice/src/selfPractice
                     javac Main.java
