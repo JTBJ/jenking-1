@@ -14,26 +14,26 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'echo "Fail!"; exit 1'
+                bat '''echo "Fail!"; exit 1'''
             }
         }
     }
     post {
-//         always {
-//             bat 'echo "This will always run"
-//         }
+        always {
+            bat '''echo "This will always run"'''
+        }
         success {
-            bat 'echo "This will run only if successful"
+            bat '''echo "This will run only if successful"'''
         }
         failure {
-            bat echo "This will run only if failed"
+            bat '''echo "This will run only if failed"'''
         }
         unstable {
-            bat 'echo "This will run only if the run was marked as unstable"
+            bat '''echo "This will run only if the run was marked as unstable"'''
         }
         changed {
-            bat 'echo "This will run only if the state of the Pipeline has changed"
-            bat 'For example, if the Pipeline was previously failing but is now successful'
+            bat '''echo "This will run only if the state of the Pipeline has changed"'''
+            bat '''For example, if the Pipeline was previously failing but is now successful'''
         }
     }
 }
