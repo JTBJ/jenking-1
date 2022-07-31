@@ -19,9 +19,9 @@ pipeline {
         }
     }
     post {
-        always {
-            bat 'echo "This will always run"
-        }
+//         always {
+//             bat 'echo "This will always run"
+//         }
         success {
             bat 'echo "This will run only if successful"
         }
