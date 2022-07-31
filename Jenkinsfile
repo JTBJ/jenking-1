@@ -1,9 +1,13 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat 'mvn --version'
+                bat 'echo "Hello World"'
+                bat '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
