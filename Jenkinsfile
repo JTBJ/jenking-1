@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'echo "Hello World!!!!!"'
+                bat 'echo "Hello World!!!"'
                 bat '''
                     echo "Multiline shell steps works too"
                     cd ../../../IdeaProjects/swingPractice/src/selfPractice
